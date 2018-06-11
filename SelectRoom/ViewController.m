@@ -35,6 +35,18 @@ static NSString *cellIdentifier = @"RoomCell";
         for (int j = 0; j < 5; j++) {
             
             SelectModel *model = [[SelectModel alloc] initWithNum:i + 1];
+            if (i == 1) {
+                if (j == 0 || j == 1 || j == 3) {
+                    model.isSelect = YES;
+                }
+            }
+            else if (i == 0) {
+                if (j == 2 | j == 4) {
+                    model.isSelect = YES;
+
+                }
+            }
+            
             [tempArray addObject:model];
         }
         
